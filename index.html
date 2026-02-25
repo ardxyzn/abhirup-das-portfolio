@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Abhirup Das | Civil Engineer</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+<style>
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #0F1C2E;
+    color: #E6EDF3;
+    scroll-behavior: smooth;
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    background: #13243B;
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: #E6EDF3;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #FF8C32;
+}
+
+.download-btn {
+    background: #FF8C32;
+    color: #0F1C2E;
+    padding: 8px 15px;
+    border-radius: 6px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 160px 80px 80px;
+}
+
+.hero h1 {
+    color: #FF8C32;
+    font-size: 40px;
+}
+
+.hero-image img {
+    width: 260px;
+    border-radius: 50%;
+    border: 4px solid #FF8C32;
+}
+
+.linkedin {
+    display: inline-block;
+    margin-top: 20px;
+    background: #FF8C32;
+    padding: 10px 18px;
+    border-radius: 6px;
+    color: #0F1C2E;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+section {
+    padding: 80px;
+    margin: 40px 80px;
+    background: #13243B;
+    border-radius: 12px;
+}
+
+h2 {
+    color: #FF8C32;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.skills-grid div {
+    background: #0F1C2E;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+    <div><strong>Abhirup Das</strong></div>
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><button onclick="downloadCV()" class="download-btn">Download CV</button></li>
+    </ul>
+</nav>
+
+<div id="cv-content">
+
+<section class="hero">
+    <div>
+        <h1>Abhirup Das</h1>
+        <h3>Civil Engineer | Quantity Surveyor | Billing Engineer</h3>
+        <p>
+            Specialized in Quantity Surveying, BOQ Preparation, Rate Analysis,
+            Billing Engineering and MoRTH-compliant Highway Infrastructure Projects.
+        </p>
+
+        <a href="https://www.linkedin.com/in/abhirup-das-602523122/" 
+           target="_blank" class="linkedin">
+           <i class="fab fa-linkedin"></i> Connect on LinkedIn
+        </a>
+    </div>
+
+    <div class="hero-image">
+        <img src="Abhirup_Das.jpg" alt="Abhirup Das">
+    </div>
+</section>
+
+<section id="about" class="reveal">
+<h2>Professional Summary</h2>
+<p>
+Civil Engineer with 6+ years of experience in Quantity Surveying,
+Cost Estimation, Subcontractor Billing, DPR/MPR Reporting,
+and technical compliance under MoRTH standards.
+</p>
+</section>
+
+<section id="skills" class="reveal">
+<h2>Core Competencies</h2>
+<div class="skills-grid">
+<div>Quantity Surveying</div>
+<div>BOQ & Rate Analysis</div>
+<div>Cost Control</div>
+<div>BBS Preparation</div>
+<div>Subcontractor Billing</div>
+<div>DPR / MPR Reporting</div>
+<div>MoRTH Compliance</div>
+<div>AutoCAD & MS Office</div>
+</div>
+</section>
+
+<section id="experience" class="reveal">
+<h2>Professional Experience</h2>
+
+<h3>Engineer - Civil | RITES Limited</h3>
+<ul>
+<li>Certified contractor bills and verified executed quantities.</li>
+<li>Prepared BBS and performed detailed quantity takeoff.</li>
+<li>Ensured compliance with drawings and technical specifications.</li>
+</ul>
+
+<h3>Civil Engineer | DAV Public School</h3>
+<ul>
+<li>Prepared cost estimates and tender documents.</li>
+<li>Managed subcontractor billing and site supervision.</li>
+</ul>
+
+<h3>Assistant Engineer | SM Consultants Pvt Ltd</h3>
+<ul>
+<li>Prepared detailed estimates as per MoRTH standards.</li>
+<li>Assisted in budgeting and BOQ preparation.</li>
+</ul>
+
+</section>
+
+<section id="contact" class="reveal">
+<h2>Contact</h2>
+<p>Email: ardce15816@gmail.com</p>
+<p>Mobile: +91 7609099908</p>
+<p>Location: Tamluk, West Bengal</p>
+</section>
+
+</div>
+
+<footer>
+© 2026 Abhirup Das | All Rights Reserved
+</footer>
+
+<script>
+
+window.addEventListener('scroll', function() {
+    document.querySelectorAll('.reveal').forEach(function(el) {
+        var position = el.getBoundingClientRect().top;
+        var screenHeight = window.innerHeight;
+        if (position < screenHeight - 100) {
+            el.classList.add('active');
+        }
+    });
+});
+
+function downloadCV() {
+
+    var element = document.getElementById("cv-content");
+
+    var opt = {
+        margin: 0.5,
+        filename: 'Abhirup_Das_CV.pdf',
+        image: { type: 'jpeg', quality: 1 },
+        html2canvas: { scale: 2 },
+        jsPDF: { unit: 'in', format: 'a4', orientation: 'portrait' }
+    };
+
+    document.body.style.background = "white";
+    document.body.style.color = "black";
+
+    html2pdf().set(opt).from(element).save().then(() => {
+        document.body.style.background = "#0F1C2E";
+        document.body.style.color = "#E6EDF3";
+    });
+}
+
+</script>
+
+</body>
+</html>
